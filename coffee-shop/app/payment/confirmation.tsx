@@ -12,15 +12,21 @@ export default function ConfirmationScreen() {
   return (
     <LinearGradient colors={["#192438", "#313139"]} style={{ flex: 1 }}>
       <SafeAreaView style={styles.safe}>
-        <Text style={styles.title}>Confirmation</Text>
-
-        <View style={styles.iconWrap}>
-          <Ionicons name="checkmark" size={90} color="#F3F3F3" />
+        <View style={styles.header}>
+          <View style={{ width: 40 }} />
+          <Text style={styles.headerTitle}>Confirmation</Text>
+          <View style={{ width: 40 }} />
         </View>
 
-        <Text style={styles.success}>Your order has been accepted</Text>
+        <View style={styles.content}>
+          <View style={styles.iconWrap}>
+            <Ionicons name="checkmark" size={90} color="#F3F3F3" />
+          </View>
 
-        <Text style={styles.desc}>Fresh, warm, and just for you{"\n"}</Text>
+          <Text style={styles.success}>Your order has been accepted</Text>
+
+          <Text style={styles.desc}>Freshly brewed with love{"\n"}</Text>
+        </View>
 
         <Pressable
           style={styles.button}
@@ -39,16 +45,26 @@ export default function ConfirmationScreen() {
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
     paddingHorizontal: 24,
   },
 
-  title: {
-    position: "absolute",
-    top: 20,
-    fontSize: 22,
+  header: {
+    height: 56,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+
+  headerTitle: {
     color: "#F3F3F3",
+    fontSize: 20,
+    fontWeight: "500",
+  },
+
+  content: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
 
   iconWrap: {
@@ -73,16 +89,16 @@ const styles = StyleSheet.create({
     color: "#EAEAEA",
     textAlign: "center",
     opacity: 0.8,
-    marginBottom: 40,
+    lineHeight: 22,
   },
 
   button: {
     height: 56,
-    width: "100%",
     borderRadius: 16,
     backgroundColor: "#8B572A",
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 20,
   },
 
   buttonText: {
