@@ -17,8 +17,12 @@ import { useAuthStore } from "../../store/useAuthStore";
 import { useProfileStore } from "../../store/useProfileStore";
 
 const MENU = [
-  { title: "Card Information", icon: "receipt-outline", route: "/card-info" },
-  { title: "Payment Method", icon: "card-outline", route: "/payment/payment" },
+  {
+    title: "Card Information",
+    icon: "receipt-outline",
+    route: "card-info",
+  },
+  { title: "Payment Method", icon: "card-outline", route: "payment/payment" },
 ];
 
 export default function ProfileScreen() {
@@ -103,7 +107,7 @@ export default function ProfileScreen() {
             <Pressable
               key={item.title}
               style={styles.row}
-              onPress={() => router.back}
+              onPress={() => router.push(item.route as any)}
             >
               <View style={styles.left}>
                 <Ionicons name={item.icon as any} size={22} color="#8B572A" />
