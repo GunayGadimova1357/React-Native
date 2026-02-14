@@ -22,6 +22,7 @@ export const showDays: ShowDay[] = [
   { id: "4", day: "THU", date: "12", month: "FEB" },
   { id: "5", day: "FRI", date: "13", month: "FEB" },
   { id: "6", day: "SAT", date: "14", month: "FEB" },
+  { id: "7", day: "SUN", date: "15", month: "FEB" },
 ];
 
 export const cinemas: Cinema[] = [
